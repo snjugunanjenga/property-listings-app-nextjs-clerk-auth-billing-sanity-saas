@@ -80,8 +80,8 @@ export function MapView({
         {validProperties.map((property) => (
           <Marker
             key={property._id}
-            longitude={property.location?.lng}
-            latitude={property.location?.lat}
+            longitude={property.location?.lng ?? 0}
+            latitude={property.location?.lat ?? 0}
             anchor="bottom"
             onClick={(e) => {
               e.originalEvent.stopPropagation();

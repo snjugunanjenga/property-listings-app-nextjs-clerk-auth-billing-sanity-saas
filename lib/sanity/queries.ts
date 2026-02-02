@@ -1,15 +1,5 @@
 import { defineQuery } from "next-sanity";
 
-// All amenities (for forms/filters)
-export const AMENITIES_QUERY = defineQuery(/* groq */ `
-  *[_type == "amenity"] | order(order asc) {
-    _id,
-    value,
-    label,
-    icon
-  }
-`);
-
 // Image fragment for reuse
 const imageFragment = /* groq */ `
   asset->{
