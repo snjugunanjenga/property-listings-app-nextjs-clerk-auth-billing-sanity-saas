@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "typegen": "sanity schema extract --path=./schema.json && sanity typegen generate",
+    "typegen": "cross-env $(pnpm bin)/sanity schema extract --path=./schema.json && cross-env $(pnpm bin)/sanity typegen generate",
     "update-types": "pnpm run typegen",
-    "seed": "npx tsx scripts/seed/seed.ts",
+    "seed": "cross-env tsx scripts/seed/seed.ts",
     "seed:clean": "npx tsx scripts/seed/seed.ts --clean"
   },
   "dependencies": {
@@ -48,6 +48,7 @@
     "sonner": "^2.0.7",
     "svix": "^1.84.1",
     "tailwind-merge": "^3.4.0",
+    "vercel": "^50.12.3",
     "zod": "^4.3.6"
   },
   "devDependencies": {
@@ -59,6 +60,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "cross-env": "^10.1.0",
     "dotenv": "^17.2.3",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
