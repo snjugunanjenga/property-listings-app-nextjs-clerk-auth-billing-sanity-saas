@@ -341,6 +341,12 @@ Navigate to [http://localhost:3000/studio](http://localhost:3000/studio) to mana
 
 ## 🚢 Deployment
 
+## Live Demo
+
+**View the deployed application:** [https://property-listings-app-nextjs-clerk.vercel.app](https://property-listings-app-nextjs-clerk.vercel.app)
+
+---
+
 ### Deploy to Vercel
 
 **Option 1: Vercel CLI**
